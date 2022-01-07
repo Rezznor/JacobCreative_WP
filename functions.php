@@ -73,6 +73,15 @@ function add_font_awesome()
 add_action('wp_enqueue_scripts', 'add_font_awesome');
 
 /**
+ * Add Feather Icons
+ */
+function add_feather_icons()
+{
+    wp_enqueue_script('add_feather_icons', 'https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js', false);
+}
+add_action('wp_enqueue_scripts', 'add_feather_icons');
+
+/**
  * Add Custom JS
  */
 function add_custom_js()

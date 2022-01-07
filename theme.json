@@ -38,6 +38,11 @@
             "color": "#3f83ff"
         },
         {
+            "name": "jcTextLight",
+            "slug": "jctextlight",
+            "color": "#8890a4"
+        },
+        {
             "name": "jcFooter",
             "slug": "jcfooter",
             "color": "#262b35"
