@@ -156,5 +156,32 @@ function tailpress_nav_menu_add_submenu_class($classes, $args, $depth)
 
 add_filter('nav_menu_submenu_css_class', 'tailpress_nav_menu_add_submenu_class', 10, 3);
 
+/**
+ * Register Footer Widget
+ */
+function footer_widget_init()
+{
+
+    register_sidebar(array(
+        'name'          => 'Footer Logo and Nav',
+        'id'            => 'footer_nav',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4 class="font-jcHeading font-medium mb-4 text-white">',
+        'after_title'   => '</h4>',
+    ));
+    register_sidebar(array(
+        'name'          => 'Footer Newsletter',
+        'id'            => 'footer_newsletter',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>'
+    ));
+}
+
+add_action('widgets_init', 'footer_widget_init');
+
+
 /* Disable Admin Bar during Dev */
 add_filter('show_admin_bar', '__return_false');

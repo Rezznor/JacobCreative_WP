@@ -4,12 +4,12 @@ get_header();
 ?>
 <div class='flex w-full bg-gray-100 py-16'>
     <div class='container'>
-        <div class='text-center w-1/2 m-auto'>
+        <div class='text-center lg:w-1/2 w-full m-auto'>
             <h3 class='font-jcHeading font-medium text-base mt-4 mb-8 text-jcblue'>Services</h3>
             <h2 class='font-jcSubHeading font-bold text-3xl w-4/5 m-auto'>Let's grow your business together using our suite of services</h2>
         </div>
 
-        <div class='grid grid-cols-4 gap-8 my-24'>
+        <div class='grid sm:grid-cols-2 md:grid-cols-4 grid-cols-1 gap-8 my-24'>
 
             <div>
                 <i data-feather='code' class='h-12 w-12 mx-auto flex justify-center w-full text-jcblue'></i>

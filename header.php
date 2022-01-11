@@ -69,7 +69,7 @@
                             ?>
 
 
-                            <ul class='flex flex-row list-none'>
+                            <ul class='hidden lg:flex lg:flex-row lg:list-none'>
                                 <li class='mx-4 md:ml-8'>
                                     <a href='https://www.facebook.com/JacobCreativeCA'><i class="fab fa-facebook-f"></i></a>
                                 </li>

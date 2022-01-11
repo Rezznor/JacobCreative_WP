@@ -13,7 +13,9 @@
         <div class='container'>
             <div class='grid grid-cols-4 gap-y-8 py-12'>
 
-                <div class=''>
+                <?php dynamic_sidebar('footer_nav'); ?>
+
+                <!-- <div class=''>
                     <h4 class='font-jcHeading font-medium mb-4 text-white'>Company</h4>
                     <ul class='font-jcSubHeading text-base font-normal leading-2 space-y-2'>
                         <li class=''>
@@ -29,7 +31,7 @@
                             <a href='/contact'>Contact</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <div class=''>
                     <h4 class='font-jcHeading font-medium mb-4 text-white'>Customer</h4>
                     <p class=''>Client support and information <br />coming soon</p>
@@ -46,7 +48,6 @@
                 </div>
                 <div class=''>
                     <h4 class='font-jcHeading font-medium mb-4 text-white'>Subscribe to our newsletter</h4>
-
 
                 </div>
 
