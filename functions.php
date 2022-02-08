@@ -178,6 +178,14 @@ function footer_widget_init()
         'before_title'  => '<h4>',
         'after_title'   => '</h4>'
     ));
+    register_sidebar(array(
+        'name'          => 'Contact Page Form',
+        'id'            => 'contact_form_widget',
+        'before_widget' => '<div class="grid grid-cols-2 gap-4 w-3/5 mx-auto my-10">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h4>',
+        'after_title'   => '</h4>'
+    ));
 }
 
 add_action('widgets_init', 'footer_widget_init');

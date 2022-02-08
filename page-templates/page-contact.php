@@ -1,16 +1,61 @@
 <?php
 /* Template Name: Contact Page */
-get_header();
+?>
+<?php
+if (isset($_POST['submitted'])) {
+    if (trim($_POST['contactName']) === '') {
+        $nameError = 'Please enter your name.';
+        $hasError = true;
+    } else {
+        $name = trim($_POST['contactName']);
+    }
+
+    if (trim($_POST['email']) === '') {
+        $emailError = 'Please enter your email address.';
+        $hasError = true;
+    } else if (!preg_match("/^[[:alnum:]][a-z0-9_.-]*@[a-z0-9.-]+\.[a-z]{2,4}$/i", trim($_POST['email']))) {
+        $emailError = 'You entered an invalid email address.';
+        $hasError = true;
+    } else {
+        $email = trim($_POST['email']);
+    }
+
+    if (trim($_POST['comments']) === '') {
+        $commentError = 'Please enter a message.';
+        $hasError = true;
+    } else {
+        if (function_exists('stripslashes')) {
+            $comments = stripslashes(trim($_POST['comments']));
+        } else {
+            $comments = trim($_POST['comments']);
+        }
+    }
+
+    if (!isset($hasError)) {
+        $emailTo = get_option('tz_email');
+        if (!isset($emailTo) || ($emailTo == '')) {
+            $emailTo = get_option('admin_email');
+        }
+        $subject = '[PHP Snippets] From ' . $name;
+        $body = "Name: $name \n\nEmail: $email \n\nComments: $comments";
+        $headers = 'From: ' . $name . '<' . $emailTo . '>' . "\r\n" . 'Reply-To: ' . $email;
+
+        wp_mail($emailTo, $subject, $body, $headers);
+        $emailSent = true;
+    }
+}
 ?>
 
-<div class='flex w-full bg-gray-100 py-16'>
+<?php get_header(); ?>
+
+<div class='flex w-full bg-gray-100 pt-44 pb-28'>
     <div class='container'>
         <div class='text-center w-1/2 m-auto'>
             <h3 class='font-jcHeading font-medium text-base mt-4 mb-8 text-jcblue'>Fill out the form and we'll be in touch!</h3>
             <h2 class='font-jcHeading font-bold text-3xl w-4/5 mx-auto'>How can we help you?</h2>
         </div>
 
-        <form>
+        <form action="<?php the_permalink(); ?>" method="post" id="jc_contactFormWP">
 
             <div class='grid grid-cols-2 gap-4 w-3/5 mx-auto my-10'>
 
@@ -25,7 +70,7 @@ get_header();
                 <button class='col-start-2 place-self-end w-40 h-10 bg-jcbluedark text-white text-center hover:bg-jcblue' type='submit'>Send Message</button>
 
             </div>
-
+            <input type="hidden" name="submitted" id="submitted" value="true" />
         </form>
 
     </div>

@@ -53,7 +53,7 @@ get_header();
         </div>
 
         <div class='flex justify-center w-full'>
-            <a class='transform transition duration-300 px-10 py-4 rounded shadow-jc uppercase font-medium font-jcHeading text-xs tracking-wider bg-white border-2 border-transparent hover:shadow-jcHover hover:-translate-y-1'>Learn More</a>
+            <a href='/services' class='transform transition duration-300 px-10 py-4 rounded shadow-jc uppercase font-medium font-jcHeading text-xs tracking-wider bg-white border-2 border-transparent hover:shadow-jcHover hover:-translate-y-1'>Learn More</a>
         </div>
 
     </div>
@@ -147,7 +147,7 @@ get_header();
             </div>
 
             <div class=''>
-                <img src='/wp-content/themes/tailpress/resources/img/process3.jpg' class='h-4/5 mx-auto' />
+                <img src='/wp-content/themes/tailpress/resources/img/process3.jpg' class='mx-auto' />
             </div>
 
         </div>

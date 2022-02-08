@@ -3,9 +3,9 @@
 get_header();
 ?>
 
-<div class="container my-8 mx-auto">
+<div class="bg-white my-8 mx-auto">
 
-    <div class='flex w-full bg-white py-20'>
+    <div class='flex w-full py-20'>
 
         <div class='container'>
 

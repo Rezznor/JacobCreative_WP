@@ -1,28 +1,31 @@
 <?php get_header(); ?>
 
-	<div class="container my-8 mx-auto">
+<div class="bg-white my-8 mx-auto">
 
-	<?php if ( have_posts() ) : ?>
+    <div class="container my-8 mx-auto">
 
-		<?php
-		while ( have_posts() ) :
-			the_post();
-			?>
+        <?php if (have_posts()) : ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+            <?php
+            while (have_posts()) :
+                the_post();
+            ?>
 
-			<?php
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-			?>
+                <?php get_template_part('template-parts/content', 'single'); ?>
 
-		<?php endwhile; ?>
+                <?php
+                // If comments are open or we have at least one comment, load up the comment template.
+                if (comments_open() || get_comments_number()) :
+                    comments_template();
+                endif;
+                ?>
 
-	<?php endif; ?>
+            <?php endwhile; ?>
 
-	</div>
+        <?php endif; ?>
+
+    </div>
+</div>
 
 <?php
 get_footer();

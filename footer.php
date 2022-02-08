@@ -48,7 +48,7 @@
                 </div>
                 <div class=''>
                     <h4 class='font-jcHeading font-medium mb-4 text-white'>Subscribe to our newsletter</h4>
-
+                    <p>Coming soon...</p>
                 </div>
 
 

@@ -14,7 +14,7 @@
 
     <?php do_action('tailpress_site_before'); ?>
 
-    <div id="page" class="min-h-screen flex flex-col">
+    <div id="page" class="min-h-screen flex flex-col bg-gray-50">
 
         <?php do_action('tailpress_header'); ?>
 
@@ -94,7 +94,7 @@
                             <div class='container mx-auto py-96'>
                                 <div class='grid grid-cols-1 md:grid-cols-3 text-center md:text-left'>
                                     <div class='col-span-2'>
-                                        <h2 class='mb-8 text-gray-50 font-jcHeading font-bold tracking-tight text-5xl'>
+                                        <h2 class='mb-8 text-gray-50 font-jcHeading font-bold tracking-tight text-5xl leading-none'>
                                             We're a web design and development studio &#8212; focusing on
                                             bringing businesses online and increasing their online presence
                                         </h2>
